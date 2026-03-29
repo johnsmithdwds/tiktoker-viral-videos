@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔥 Viral Videos 🔥</title>
+
+<style>
+*{ box-sizing:border-box; }
+
+body {
+    margin:0;
+    font-family: Arial;
+    background:#0f172a;
+    color:#fff;
+}
+
+/* Container */
+.container{
+    width:100%;
+    max-width:500px;
+    margin:auto;
+    padding:10px;
+}
+
+/* Card */
+.card{
+    background:#1e293b;
+    border-radius:12px;
+    padding:10px;
+    margin-bottom:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+}
+
+/* Video */
+.video{
+    position:relative;
+}
+
+.video img{
+    width:100%;
+    border-radius:10px;
+    display:block;
+}
+
+/* Play Icon */
+.play{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:30px;
+    background:rgba(0,0,0,0.6);
+    padding:8px 12px;
+    border-radius:50%;
+}
+
+/* Title */
+.title{
+    font-weight:bold;
+    margin:10px 0;
+    font-size:15px;
+    color:#facc15;
+}
+
+/* Buttons */
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.buttons a{
+    flex:1 1 30%;
+    text-align:center;
+    padding:8px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    color:#fff;
+    font-size:13px;
+    transition:0.3s;
+}
+
+.buttons a:hover{
+    transform:scale(1.05);
+    opacity:0.9;
+}
+
+.btn1{ background:#3b82f6; }
+.btn2{ background:#22c55e; }
+.btn3{ background:#f97316; }
+
+/* Text */
+.desc{
+    font-size:12px;
+    color:#ccc;
+    margin-top:8px;
+}
+
+.stats{
+  margin-top:8px;
+  font-size:13px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.left-stats{
+  display:flex;
+  gap:10px;
+}
+
+.download{
+  color:#22c55e;
+  font-weight:bold;
+}
+
+/* Loader */
+#loader{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#000;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  z-index:99999;
+}
+
+.spinner{
+  border:5px solid #333;
+  border-top:5px solid #22c55e;
+  border-radius:50%;
+  width:50px;
+  height:50px;
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  100%{ transform:rotate(360deg); }
+}
+
+    
+</style>
+
+</head>
+<body>
+
+<div class="container" id="app"></div>
+
+    <div id="loader">
+  <div class="spinner"></div>
+  <p style="margin-top:10px;">ভিডিও লোড হচ্ছে...</p>
+    </div>
+    
+<script>
+function playVideo(){
+  const loader = document.getElementById("loader");
+  loader.style.display = "flex";
+
+  setTimeout(function(){
+    loader.style.display = "none";
+    window.location.href = "https://www.profitablecpmratenetwork.com/wfgse0gu0?key=dfa595cebf5450be98481dd0467d958f";
+  }, 3000);
+}
+</script>
+    
+<script>
+
+// 🔥 image list
+const images = [
+"https://i.imghippo.com/files/YEjN6327Dw.jpg",
+"https://i.imghippo.com/files/oSE1993XnQ.png",
+"https://i.postimg.cc/RFy9gFkY/Whats-App-Image-2025-12-09-at-15-21-39-ce14da15.jpg",
+"https://i.postimg.cc/28spYsk2/photo-2025-12-18-18-20-55.jpg",
+"https://i.postimg.cc/xjKSrfQ4/Screenshot-2026-02-06-204117.png",
+"https://i.postimg.cc/LXccdLM8/photo-2026-01-14-11-46-50.jpg",
+"https://i.postimg.cc/MTF7gRcQ/photo-2026-03-21-14-58-01.jpg",
+"https://i.postimg.cc/Zn55rcpB/photo-2026-03-23-16-57-47.jpg",
+"https://i.postimg.cc/zGm4PS7r/IMG-20250902-132719-942.jpg",
+"https://i.postimg.cc/X7d49Z21/image-search-1756758141344.png",
+"https://i.postimg.cc/kgwS19PP/IMG-20250902-150722.jpg",
+"https://i.postimg.cc/C5bxnCss/FB-IMG-1756800753955.jpg",
+"https://i.postimg.cc/56sZNMfT/sample3.jpg",
+"https://i.postimg.cc/mkJ36kNX/image-search-1756797304811.jpg",
+"https://i.postimg.cc/JsmWtQXH/sample2.jpg",
+"https://i.postimg.cc/rdZ6nXP5/sample1.jpg",
+"https://i.postimg.cc/x8VKBqWC/IMG-20250902-183606-674.jpg",
+"https://i.postimg.cc/m2RYwzYp/IMG-20250902-183339-926.jpg",
+"https://i.postimg.cc/j5Q53QB3/image-search-1756802042026.jpg",
+"https://i.postimg.cc/htrMb93M/IMG-20250902-132730-352.jpg",
+"https://i.postimg.cc/YqcPjPMc/image-search-1756758285854.jpg",
+"https://i.postimg.cc/qBCTdhdB/image-search-1756758210832.jpg"
+];
+
+// 🔥 title list
+const titles = [
+"🔥 নতুন রেমিটেন যোদ্ধাদের ভিডিও। বিশ্বের ৮ নম্বর position এ থাকা couple এর ভাইরাল ভিডিও",
+"🔥 সফিক এবং সোনালী এর ভাইরাল ভিডিও",
+"🔥 New couple এর ভাইরাল ভিডিও",
+"🔥 payel Gaming এর ভাইরাল ভিডিও",
+"🔥 টিকটকার Nujhat এর ১৯ মিনিট ২৫ সেকেন্ডের এর ভাইরাল ভিডিও",
+"🔥 Arohi Mim এর ভাইরাল ভিডিও",
+"🔥 হাতিয়া উপজেলার UNO স্যার এর 11 মিনিট 05 সেকেন্ডের এর ভাইরাল ভিডিও",
+"🔥 part 2 হাতিয়া উপজেলার UNO স্যার এর 9 মিনিট 03 সেকেন্ডের এর ভাইরাল ভিডিও",
+"🔥 অভিনেত্রী মাহিয়া মাহি আপুর ভাইরাল ভিডিও",
+"🔥 টিকটকার জান্নাত তহার ভাইরাল ভিডিও",
+"🔥 অভিনেত্রী তানজিন তিশা এর ভাইরাল ভিডিও",
+"🔥 টিকটকার আনিসার আপুর এর ভাইরাল ভিডিও",
+"🔥 টিকটকার আখি আপুর ভাইরাল ভিডিও",
+"🔥 টিকটকার শশা আপু, রিধি আপুর ভাইরাল ভিডিও",
+"🔥 othoi আপুর ভাইরাল ভিডিও",
+"🔥 আফরিন আপুর ভাইরাল ভিডিও",
+"🔥 স্কুল ছাএী Anu এর ভাইরাল ভিডিও",
+"🔥 বাংলার সেই ভাইরাল ভাবীর ভিডিও",
+"🔥 নিলুফা আকতার, নিলুফা আপুর এর ভাইরাল ভিডিও",
+"🔥 টিকটকার সামিয়া জারিন এর ভাইরাল ভিডিও",
+"🔥 Actor মেহেজাবিন আপুর ভাইরাল ভিডিও",
+"🔥 টিকটকার single আফা MISS চকলেট আপুর ভাইরাল ভিডিও"
+];
+
+// 🔥 random likes/views
+function randomK(min, max) {
+  return (Math.random() * (max - min) + min).toFixed(1) + "k";
+}
+    function randomDownload(min, max){
+  return Math.floor(Math.random()*(max-min)+min)+"+";
+    }
+
+const app = document.getElementById("app");
+
+// 🔥 generate cards
+images.forEach((img, index) => {
+
+app.innerHTML += `
+<div class="card">
+
+<div class="video" onclick="playVideo()">
+<img src="${img}">
+<div class="play">▶</div>
+</div>
+
+<div class="title">
+${titles[index] || "🔥 ভাইরাল ভিডিও দেখুন"}
+</div>
+
+<div class="buttons">
+<a href="https://www.profitablecpmratenetwork.com/fyk2ezrypn?key=b5b31635b6110a70f84aaf835c69021d" class="btn1">▶ ভিডিও লিংক</a>
+<a href="https://www.profitablecpmratenetwork.com/fyk2ezrypn?key=b5b31635b6110a70f84aaf835c69021d" class="btn2">⬇ Download</a>
+<a href="https://www.profitablecpmratenetwork.com/qi7puzt1?key=464fb4582c84f557321f9335262eb375" class="btn3">📝 Register</a>
+</div>
+
+<div class="desc">
+ভিডিও দেখার নিয়ম: ভিডিও ডাউনলোড এবং ভিডিও দেখতে প্রথমে App টি ডাউনলোড করুন। Register বাটনে ক্লিক করুন > Play With Share box এ ক্লিক করুন > Play store নিয়ে যাবে sharebox app টি দেখতে পাবেন install করুন। তারপর আবার Register বাটনে ক্লিক করুন > তাহলেই ভিডিও দেখতে পারবেন।
+</div>
+
+<div class="stats">
+  <div class="left-stats">
+    👍 ${randomK(10,50)}
+    👁️ ${randomK(40,100)}
+  </div>
+  <div class="download">
+    ⬇️ ${randomDownload(5000, 50000)}
+  </div>
+</div>
+
+</div>
+`;
+
+});
+
+ // ✅ এখানে add করা হয়েছে (10 sec পরে hide)
+setTimeout(function(){
+  var ad = document.getElementById("adBar");
+  if(ad){
+    ad.style.display = "none";
+  }
+}, 3000);
+
+</script>
+    
+</script>
+
+<!-- 🔥 SOCIAL BAR AD -->
+<div class="social-bar" id="adBar">
+  <div class="close-btn" onclick="document.getElementById('adBar').style.display='none'">✖</div>
+
+  <a href="https://www.profitablecpmratenetwork.com/mq2h6va2g?key=84fd8af9fbf4199827f781b89631e3d7">
+    <img src="https://i.imgur.com/QcDBxoT.png" class="ad-img">
+  </a>
+
+  <div class="text">
+    👉 নতুন অফার এখনই রেজিস্ট্রেশন করুন এবং পান ৫০০ টাকা বোনাস! সীমিত সময়ের অফার — মিস করবেন না।
+  </div>
+
+  <a href="https://www.profitablecpmratenetwork.com/mq2h6va2g?key=84fd8af9fbf4199827f781b89631e3d7" class="btn-ad">
+    👉 Join Now
+  </a>
+</div>
+
+<style>
+.social-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #111;
+  padding: 10px;
+  text-align: center;
+  z-index: 9999;
+  color: #fff;
+}
+
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.ad-img {
+  width: 120px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.text {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.btn-ad {
+  display: inline-block;
+  padding: 10px 20px;
+  background: red;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+</style>
+<script>
+// 🔥 500 second পরে redirect
+setTimeout(function(){
+  window.location.href = "https://www.profitablecpmratenetwork.com/fyk2ezrypn?key=b5b31635b6110a70f84aaf835c69021d";
+}, 500000);
+</script>
+
+    
+</body>
+</html>
